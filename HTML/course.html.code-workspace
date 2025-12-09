@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../crud.java"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "course.html"
+	}
+}

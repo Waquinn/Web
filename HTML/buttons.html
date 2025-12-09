@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<head> </head>
+<style> 
+.subscribe-button {
+	background-color: rgb(200, 0, 0);
+	color: white;
+	border: none; 
+	height: 36px; 
+	width: 110px;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 8px;
+	transition: opacity 0.15s;
+}	
+
+.subscribe-button:hover {
+     opacity: 0.8;
+}
+
+.subscribe-button: active {
+     opacity: 0.5;
+}
+
+	.join-button {
+     background-color: white;
+     border-color: rgb(41, 118, 211);
+     border-style: solid;
+     border-width: 1px;
+     color: rgb(41, 118, 211);
+     height: 36px;
+     width: 62px;
+     border-radius: 3px;
+     cursor: pointer;
+     margin-right: 8px;
+     transition: background-color 1s,
+     color 1s;
+}
+
+.join-button:hover {
+     background-color: rgb(41, 118, 211);
+     color: white;
+}
+
+.join-button: active {
+     opacity: 0.7;
+}
+
+
+.tweet-button {
+     background-color: rgb(41, 130, 211);
+     border-color: rgb(41, 130, 211)
+     border-style: solid;
+     height: 36px;
+     width: 90px;
+     border-radius: 20px;
+     border-width: 0px;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     cursor: pointer;
+     margin-left: 8px;
+     box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+     
+.requestnow-button {
+    background-color: black;
+    border-style: solid;
+    border-width: 0px;
+    color: white;
+    height: 36px;
+    width: 110px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+  
+.addtocart-button {
+    background-color: rgb(255, 216, 20);
+    border-style: solid;
+    height: 36px;
+    width: 160px;
+    border-radius: 20px;
+    border-width: 0px;
+    color: black
+    cursor: pointer;
+    margin-right: 8px;
+}
+    
+.signup-button {
+    background-color: rgb(46, 164, 79);
+    height: 36px;
+    width: 110px;
+    border-style: solid;
+    border-color: rgb(46, 150, 79);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.getstarted-button {
+    background-color:rgb(121, 82, 179);
+    height: 36px;
+    width: 115px;
+    border-style: solid;
+    border-color: rgb(121, 82, 159);
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.download-button {
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(128, 128, 128);
+    height: 36px;
+    width: 110px;
+    border-radius: 3px;
+    color: rgb(128, 128, 128);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.applyoncompanywebsite-button {
+    background-color: rgb(10, 102, 194);
+    height: 40px;
+    width: 225px;
+    border-style: solid;
+    border-color: rgb(10, 102, 194);
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.save-button {
+    background-color: white;
+    height: 40px;
+    width: 80px;
+    color: rgb(10, 102, 194);
+    border-style: solid;
+    border-color: rgb(10, 102, 194);
+    border-width: 1px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.link {
+     font-size: 15px;
+     color: rgb(0, 113, 133);
+     font-family: times new roman;
+     
+}
+.title {
+     font-size: 25px;
+     font-family: times new roman;
+}
+
+.price {
+    font-family: times new roman;
+    font-size: 15px;
+    color: green;
+}
+
+.delivery {
+    font-family: times new roman;
+    font-size: 15px;
+    font-weight: 1;
+}
+
+.cart {
+    background-color: rgb(255, 216, 20);
+    border-style: solid;
+    border-width: 0px;
+    height: 36px;
+    width: 115px;
+    border-radius: 40px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.buy {
+    background-color: rgb(255, 164, 28);
+    border-style: solid;
+    border-width: 0px;
+    height: 36px;
+    width: 125px;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    
+    
+    
+    
+    
+     
+}
+}
+
+</style>
+
+<h1>
+<button class="subscribe-button">
+SUBSCRIBE
+</button> 
+
+<button class="join-button">
+JOIN
+</button>
+
+<button class="tweet-button">
+Tweet
+</button>
+
+</h1>
+
+<h2>
+
+<button class="requestnow-button">
+Request now
+</button>
+
+<button class="addtocart-button">
+Add to Cart
+</button>
+
+</h2>
+
+<h3>
+
+<button class="signup-button">
+Sign up
+</button>
+
+<button class="getstarted-button">
+Get started
+</button>
+
+<button class="download-button">
+Download
+</button>
+
+</h3>
+
+<h4>
+<button class="applyoncompanywebsite-button">
+Apply on company website
+</button>
+
+<button class="save-button">
+Save
+</button>
+
+</h4>
+
+<br>
+
+<h5>
+
+<a href="https://m.youtube.com/" class="link"> 
+Link to Shop
+</a>
+
+<br> 
+
+<p class="title">Nike Black Running Shoes</p>
+
+<p class="price"> 
+$39 - in stock.
+</p>
+
+<p class="delivery">
+Free delivery tomorrow.
+</p>
+
+<button class="cart">Add to Cart</button>
+<button class="buy">Buy now</button>
+
+</h5>
+
+
+
+
+
+
+
+
+
+
+
