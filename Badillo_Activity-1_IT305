@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Validation</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form id="registration" novalidate>
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      autocomplete="new-password"
+      aria-describedby="passwordFeedback"
+    >
+    <span id="passwordFeedback" aria-live="polite"></span>
+
+    <br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      autocomplete="new-password"
+      aria-describedby="confirmFeedback"
+    >
+    <span id="confirmFeedback" aria-live="polite"></span>
+
+    <br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p id="formMessage" role="status"></p>
+
+  <script>
+    $(function() {
+      function validatePasswords() {
+        const password = $("#password").val();
+        const confirm = $("#confirmPassword").val();
+
+        const validPassword = password.length >= 8;
+        const passwordsMatch =
+          confirm.length > 0 && password === confirm;
+
+        $("#passwordFeedback").text(
+          validPassword
+            ? "Password length is acceptable."
+            : "Use at least 8 characters."
+        );
+
+        $("#confirmFeedback").text(
+          !confirm
+            ? "Please confirm your password."
+            : passwordsMatch
+              ? "Passwords match."
+              : "Passwords do not match."
+        );
+
+        $("#password").attr(
+          "aria-invalid", String(!validPassword)
+        );
+        $("#confirmPassword").attr(
+          "aria-invalid", String(!passwordsMatch)
+        );
+
+        return validPassword && passwordsMatch;
+      }
+
+      $("#password, #confirmPassword").on(
+        "input", validatePasswords
+      );
+
+      $("#registration").on("submit", function(event) {
+        if (!validatePasswords()) {
+          event.preventDefault();
+          $("#formMessage").text(
+            "Registration blocked. Correct the errors."
+          );
+          return;
+        }
+
+        // Demo only: no registration server is connected.
+        event.preventDefault();
+        $("#formMessage").text(
+          "Validation passed. Ready for server submission."
+        );
+      });
+    });
+  </script>
+</body>
+</html>
